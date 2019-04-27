@@ -1,3 +1,5 @@
+using System;
+
 namespace WordCounter.Models
 {
     public class RepeatCounter
@@ -43,10 +45,19 @@ namespace WordCounter.Models
              sentence = sentence.ToLower();
             while ((indexOccur = sentence.IndexOf(word,indexOccur)) != -1)
             {
+                if (string.IsNullOrEmpty(sentence) || string.IsNullOrEmpty(word) )
+                {
+                    Console.WriteLine("Please don't try to break my code :)");
+                    break;
+                }
+                else
+                {
                 indexOccur += word.Length;
                 countOccurence += 1;
+                }
             }
-                return countOccurence;           
+                return countOccurence;   
+                    
         }
     }
 }
