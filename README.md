@@ -10,6 +10,7 @@ _Write a program that gathers both a word and sentence from a user, then checks 
 
 ## Specifications
 
+
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
 | The application ask to the user to input a word and a sentence and return a number of the count of the occurrence of his word. | word = "cat" ; sentence = "I'm walking to the cathedral with my cat"| 1|
@@ -18,6 +19,8 @@ _Write a program that gathers both a word and sentence from a user, then checks 
 | The Program count how many times the word appears in the sentence but it should check for full word matches only.| word = "CAT" ; sentence = "I'm walking to the CAThedral." |  0 |
 | The application manages all uppercase and mixed case entries | word = "cAt" ; sentence = "I'm walking to the cathedral with my white CAT, my black Cat and my grey cAt!!"| 3|
 | The user inputs a empty word and/or sentence, the application returns an alert and the program stops (break). | word = " " ; sentence = " "| "Please don't try to break my code :)"|
+
+
 
 * 1/Simplest Behavior : Ask to the user a word and a sentence
   * a/ Declaration of RepeatCounter class
@@ -32,14 +35,15 @@ _Write a program that gathers both a word and sentence from a user, then checks 
 * 4/ Simplest Behavior : Find a word in the sentence even if the case is different
   * h/ Add the ToLower method in CheckNumberOccurence Method to manage mixed case entries of the sentence and word
 * 5/ Simplest Behavior : Return a sentence and stop the program if the user doesn't fill the fields
-  * i/ Add a if and the IsNullOrEmptyin Method to the while loop to avoid an infinite loop and stop the program
+  * i/ Add a if and the IsNullOrEmpty in Method to the while loop to avoid an infinite loop and stop the program
 * 6/ Simplest Behavior : Run the program in the Console
-* 7/ Create a Program file to ask to the user for a word and a sentence 
+  * j/ Create a Program file to ask to the user for a word and a sentence
 
 
 
 
 ## Setup/Installation Requirements
+
 
 * _clone this repository_
 *_ Open it with your text and source code editor_
