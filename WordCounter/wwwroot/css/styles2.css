@@ -1,0 +1,21 @@
+.jumbotron {
+  background-image: url("../img/wordcounter.png");
+  padding-bottom: 440px;
+  color: #ede895;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:#10041e;
+}
+
+body
+{
+background-color:#10041e;
+color: green;
+font-family: monospace;
+}
+
+.second {
+  background-color: #10041e;
+  color: green;
+  margin-left: 40%;
+}

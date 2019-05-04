@@ -1,0 +1,20 @@
+.jumbotron {
+  background-image: url("../img/tenor.gif");
+  padding-bottom: 100px;
+  color: violet;
+  font-family: monospace;
+  text-align: center;
+}
+
+body
+{
+  text-align: center;
+  color: violet;
+  font-family: monospace;
+  background-color: black;
+}
+
+.second {
+  background-color: black;
+  color: violet;
+}

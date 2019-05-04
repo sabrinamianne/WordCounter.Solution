@@ -1,13 +1,23 @@
-@{
-  Layout= "_layout";
-}
-
-
-
-
-
-
-<h2>Welcome to SKGAMES, please choose a game and enjoy!!</h2><br><br>
-<form action="/wordcounters/new" method="get">
-  <button class="btn btn-info" type="submit" name="newGame=">WORDCOUNTER GAME</button>
-</form>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/css/styles1.css">
+    <title>SK GAMES</title>
+    <link rel="shortcut icon" href="img/game.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="jumbotron" id="home">
+      <div class="container">
+        <h1>WELCOME TO SKGAMES !</h1>
+      </div>
+    </div>
+    <div id="homebody">
+      <br><br><h1>Welcome to SKGAMES, please choose a game and enjoy!!</h1>
+      <form action="/wordcounters/new" method="get"><br><br>
+        <h2><button class="second" type="submit" name="newGame=">WORDCOUNTER</button></h2>
+      </form>
+    </div>
+  </body>
+</html>
