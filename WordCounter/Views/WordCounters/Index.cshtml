@@ -1,0 +1,18 @@
+@using WordCounter.Models;
+@using System;
+
+@if (Model.CheckEmpty(@Model.GetUserWord(),@Model.GetUserSentence()))
+{
+  <h1>@Model.GetEmptyMessage()</h1>
+}
+else
+{
+
+  <h3>You have @Model.CheckNumberOccurence(@Model.GetUserWord(),@Model.GetUserSentence()) occurrence</h3>
+}
+
+
+
+
+<a href="/">Home page</a>
+<a href="/wordcounters/new">New Game</a>

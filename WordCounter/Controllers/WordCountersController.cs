@@ -3,27 +3,29 @@ using WordCounter.Models;
 
 namespace WordCounter.Controllers
 {
-  public class HomeController : Controller
+  public class WordCountersController : Controller
   {
-    [HttpGet("/")]
-    public ActionResult Index()
+    [HttpGet("/wordcounters")]
+    public ActionResult Index(string word, string sentence)
     {
-      RepeatCounter newGame = new RepeatCounter("word", "sentence");
-
+      RepeatCounter newGame = new RepeatCounter(word, sentence);
       return View(newGame);
     }
 
-    [HttpGet("/gamewc/new")]
+    [HttpGet("/wordcounters/new")]
     public ActionResult CreateForm()
     {
       return View();
     }
 
-    [HttpPost("/gamewc")]
+    [HttpPost("/wordcounters")]
     public ActionResult Create (string word, string sentence)
     {
+
       RepeatCounter newGame = new RepeatCounter(word, sentence);
-      return View("GameWC", newGame);
+      return View("Index", newGame);
     }
+
+
   }
 }

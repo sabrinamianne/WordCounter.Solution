@@ -9,6 +9,7 @@ namespace WordCounter.Models
         private int _countOccurence;
         private int _indexOccur;
         private string _errorMessage="";
+        
 
         public RepeatCounter (string word, string sentence)
         {
@@ -52,7 +53,8 @@ namespace WordCounter.Models
         {
           if (string.IsNullOrEmpty(_sentence)&& string.IsNullOrEmpty(_word))
           {
-            _errorMessage="Please, enter a sentence and a word to play!"
+            _errorMessage="Please, enter a sentence and a word to play!";
+            return true;
           }
           else if (string.IsNullOrEmpty(_sentence))
             {

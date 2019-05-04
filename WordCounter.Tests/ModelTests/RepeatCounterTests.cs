@@ -7,7 +7,7 @@ namespace WordCounter.Tests
     [TestClass]
     public class RepeatCounterTests
     {
-        
+
         [TestMethod]
         public void RepeatCounterConstructor_CreatesInstanceOfRepeatCounter_RepeatCounter()
         {
@@ -30,7 +30,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(word, userWord);
             Assert.AreEqual(sentence, userSentence);
-            
+
         }
 
         [TestMethod]
@@ -44,11 +44,11 @@ namespace WordCounter.Tests
             //Act
             string userWord = userInput.GetUserWord();
             string userSentence= userInput.GetUserSentence();
-            bool resultCheckBool = Check.CheckBoolOccurence (userSentence,userWord);
-            bool resultCheckBool2 = Check.CheckBoolOccurence (userSentence,word2);
+            bool resultCheckBool = userInput.CheckBoolOccurence (userWord, userSentence);
+            bool resultCheckBool2 = userInput.CheckBoolOccurence (word2, userSentence);
             //Assert
             Assert.AreEqual(true, resultCheckBool);
-            Assert.AreEqual(false, resultCheckBool2);        
+            Assert.AreEqual(false, resultCheckBool2);
         }
 
         [TestMethod]
@@ -63,13 +63,13 @@ namespace WordCounter.Tests
             //Act
             string userWord = userInput.GetUserWord();
             string userSentence= userInput.GetUserSentence();
-            int resultCheckCount = Check.CheckNumberOccurence (userSentence,userWord);
-            int resultCheckCount2 = Check.CheckNumberOccurence(userSentence,word2);
-            int resultCheckCountUpperCase = Check.CheckNumberOccurence(userSentence,wordUpperCase);
+            int resultCheckCount = userInput.CheckNumberOccurence (userWord, userSentence);
+            int resultCheckCount2 = userInput.CheckNumberOccurence(word2,userSentence);
+            int resultCheckCountUpperCase = userInput.CheckNumberOccurence(wordUpperCase,userSentence);
             //Assert
             Assert.AreEqual(2, resultCheckCount);
-            Assert.AreEqual(0, resultCheckCount2);        
-            Assert.AreEqual(2, resultCheckCountUpperCase);  
+            Assert.AreEqual(0, resultCheckCount2);
+            Assert.AreEqual(2, resultCheckCountUpperCase);
         }
     }
 }
