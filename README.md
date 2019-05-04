@@ -1,6 +1,6 @@
-#_Epicodus Code Review C# Week 6 Word Counter_
+#_Epicodus Code Review C# Week 7 Word Counter.Solution_
 
-#### _Write a program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence, 04.26.2019_
+#### _Build out an MVC web user interface for Word Counter application build at 04/26. The Word Counter is a program that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence, 05.03.2019_
 
 #### _By** Sabrina M**_
 
@@ -44,10 +44,14 @@ _Write a program that gathers both a word and sentence from a user, then checks 
 
 ## Setup/Installation Requirements
 
+*_Download .NET Core 2.2.103 SDK install it. Download Mono and install it.
+*_Link of my repo : https://github.com/sabrinamianne/WordCounter.Solution.git
+*_Clone this repository: git clone repo name_
+*_Change into the work directory:: $ cd WordCounter.Solution
+*_To edit the project, open the project in your preferred text editor.
+*_To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $cd WordCounter/Models $ mcs Program.cs RepeatCounter.cs; mono Program.exe;
+*_To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test
 
-* _clone this repository_
-*_ Open it with your text and source code editor_
-*_If you want to clone my project, use this link : https://github.com/sabrinamianne/WordCounter.git
 
 ## Known Bugs
 

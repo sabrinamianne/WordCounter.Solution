@@ -6,6 +6,9 @@ namespace WordCounter.Models
     {
         private string _word;
         private string _sentence;
+        private int _countOccurence;
+        private int _indexOccur;
+        private string _errorMessage="";
 
         public RepeatCounter (string word, string sentence)
         {
@@ -22,10 +25,18 @@ namespace WordCounter.Models
         {
             return _sentence;
         }
-    }
-    public static class Check
-    {
-        public static bool CheckBoolOccurence (string sentence, string word)
+
+        public int GetCount()
+        {
+          return _countOccurence;
+        }
+        public string GetEmptyMessage()
+        {
+          return _errorMessage;
+        }
+
+
+        public bool CheckBoolOccurence (string word, string sentence)
         {
             if (sentence.IndexOf(word) != -1)
             {
@@ -35,29 +46,44 @@ namespace WordCounter.Models
             {
                 return false;
             }
+         }
+
+        public bool CheckEmpty(string _word, string _sentence)
+        {
+          if (string.IsNullOrEmpty(_sentence)&& string.IsNullOrEmpty(_word))
+          {
+            _errorMessage="Please, enter a sentence and a word to play!"
+          }
+          else if (string.IsNullOrEmpty(_sentence))
+            {
+              _errorMessage = "Please, enter a sentence.";
+              return true;
+            }
+          else if (string.IsNullOrEmpty(_word))
+            {
+              _errorMessage = "Please, enter a word!";
+              return true;
+            }
+          else
+          {
+            return false;
+          }
         }
 
-        public static int CheckNumberOccurence(string sentence, string word)
+        public int CheckNumberOccurence(string _word, string _sentence)
         {
-            int countOccurence = 0;
-            int indexOccur = 0;
-             word = word.ToLower();
-             sentence = sentence.ToLower();
-            while ((indexOccur = sentence.IndexOf(word,indexOccur)) != -1)
+            _countOccurence = 0;
+            _indexOccur = 0;
+            _word = _word.ToLower();
+            _sentence = _sentence.ToLower();
+            while ((_indexOccur = _sentence.IndexOf(_word,_indexOccur)) != -1)
             {
-                if (string.IsNullOrEmpty(sentence) || string.IsNullOrEmpty(word) )
-                {
-                    Console.WriteLine("Please don't try to break my code :)");
-                    break;
-                }
-                else
-                {
-                indexOccur += word.Length;
-                countOccurence += 1;
-                }
+                _indexOccur += _word.Length;
+                _countOccurence += 1;
             }
-                return countOccurence;   
-                    
+            _errorMessage ="";
+            return _countOccurence;
         }
+
     }
 }
