@@ -64,7 +64,7 @@ _Contact me by e-mail at the following address : sabrina.epicodus@gmail.com_
 ## Technologies Used
 
 _C#_
--.NET_
+_.NET Core App 2.2.103 & ASP.NET Core Mono Atom Git Github_
 
 
 ### License

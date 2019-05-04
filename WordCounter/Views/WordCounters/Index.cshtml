@@ -1,5 +1,8 @@
 @using WordCounter.Models;
 @using System;
+@{
+  Layout= "_layout";
+}
 
 @if (Model.CheckEmpty(@Model.GetUserWord(),@Model.GetUserSentence()))
 {
