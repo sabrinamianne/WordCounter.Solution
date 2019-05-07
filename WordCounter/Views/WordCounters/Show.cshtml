@@ -1,0 +1,30 @@
+@using WordCounter.Models;
+@using System;
+@using System.Collections.Generic;
+
+@{
+  Layout= "_layout";
+}
+
+<ul>
+
+@if (Model.Count == 0)
+{
+  <h2>You have no items in your List</h2>
+}
+@if (Model.Count !=0)
+{
+  @foreach (RepeatCounter input in Model)
+  {
+    <h3>Sentence: @input.GetUserSentence() Word:  @input.GetUserWord() Occurences : @input.GetCount()</h3>
+  }
+}
+</ul>
+
+
+<br><br><form action="/wordcounters/delete" method="post">
+  <h1><button class="second" type="submit" name="newGame">CLEAR</button></h1>
+</form>
+<form action="/wordcounters/new" method="get">
+  <h1><button class="second" type="submit" name="newGame">PLAY AGAIN</button></h1>
+</form>

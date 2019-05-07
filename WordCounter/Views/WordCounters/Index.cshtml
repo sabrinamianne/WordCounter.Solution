@@ -4,6 +4,7 @@
   Layout= "_layout";
 }
 
+
 @if (Model.CheckEmpty(@Model.GetUserWord(),@Model.GetUserSentence()))
 {
   <h1>@Model.GetEmptyMessage()</h1><br>
@@ -83,8 +84,11 @@ else
   </p><br><br>
 }
 
+<br><br><h1><a href='/wordcounters/@Model.GetId()/list'>List of your WordCounter Game</a></h1>
+
+
 <br><br><form action="/wordcounters/new" method="get">
-  <h1><button class="second" type="submit" name="newGame=">NEW GAME</button></h1>
+  <h1><button class="second" type="submit" name="newGame">NEW GAME</button></h1>
 </form>
 <form action="/" method="get">
 <h1>  <button class="second" type="submit" name="HomePage=">HOME PAGE</button></h1>

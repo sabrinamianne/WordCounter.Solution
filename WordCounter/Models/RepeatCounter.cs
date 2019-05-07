@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System;
+
 
 namespace WordCounter.Models
 {
@@ -9,12 +11,36 @@ namespace WordCounter.Models
         private int _countOccurence;
         private int _indexOccur;
         private string _errorMessage="";
-        
+        private int _id;
+        private static List<RepeatCounter> _instances = new List<RepeatCounter> {};
+
 
         public RepeatCounter (string word, string sentence)
         {
             _word = word;
             _sentence = sentence;
+            _instances.Add(this);
+            _id= _instances.Count;
+        }
+
+        public int GetId()
+        {
+          return _id;
+        }
+
+        public static RepeatCounter Find(int searchId)
+        {
+          return _instances[searchId-1];
+        }
+
+        public static List<RepeatCounter> GetAll()
+        {
+          return _instances;
+        }
+
+        public static void ClearAll()
+        {
+          _instances.Clear();
         }
 
         public string GetUserWord()

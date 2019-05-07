@@ -1,0 +1,17 @@
+@using WordCounter.Models;
+@using System;
+@using System.Collections.Generic;
+
+@{
+  Layout= "_layout";
+}
+
+
+
+<h1>Your List of WordCounter Game Has Been Cleared!!</h1>
+<br><br><form action="/wordcounters/new" method="get">
+  <h1><button class="second" type="submit" name="newGame=">NEW GAME!</button></h1>
+</form>
+<h1><form action="/" method="get">
+  <button class="second" type="submit" name="HomePage=">HOME PAGE</button>
+</form></h1>

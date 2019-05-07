@@ -19,3 +19,14 @@ font-family: monospace;
   color: green;
   margin-left: 40%;
 }
+
+a {
+  font-size: 30px;
+  font-family: Times,inherit;
+  color: pink;
+}
+
+a:hover{
+  color: violet ;
+  text-decoration: underline;
+}

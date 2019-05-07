@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WordCounter.Models;
+using System.Collections.Generic;
 
 namespace WordCounter.Controllers
 {
@@ -26,6 +27,19 @@ namespace WordCounter.Controllers
       return View("Index", newGame);
     }
 
+    [HttpGet("/wordcounters/{id}/list")]
+    public ActionResult Show(int id)
+    {
+       RepeatCounter game = RepeatCounter.Find(id);
+       List<RepeatCounter> newList = RepeatCounter.GetAll();
+       return View(newList);
+    }
 
+    [HttpPost("/wordcounters/delete")]
+      public ActionResult DeleteAll()
+      {
+        RepeatCounter.ClearAll();
+        return View();
+      }
   }
 }
